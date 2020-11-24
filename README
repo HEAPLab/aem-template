@@ -1,0 +1,19 @@
+
+# Compilation
+
+	$ mkdir build
+	$ cd build
+	$ cmake .. -DBOSP_SYSROOT=/opt/bosp -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/opt/bosp
+	$ make
+	# make install # necessary to install the .recipe file
+
+# Execution
+
+- Start the BOSP daemon
+	[BOSPShell >] bbque-startd
+
+- Launch the application
+	/opt/bosp/usr/bin/aem-template
+
+- Stop the BOSP daemon
+	[BOSPShell >] bbque-stopd
